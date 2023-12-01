@@ -6,7 +6,7 @@ def part_one():
     elf_sums = [sum(elf) for elf in elves]
     return max(elf_sums)
 
-print(f"Part one: {part_one()}")
+print(f"Part one: {part_one()}") #72478
 
 def part_two():
     f = open('input.txt','r')
@@ -15,4 +15,4 @@ def part_two():
     elf_sums = sorted([sum(elf) for elf in elves], reverse=True)
     return sum(elf_sums[0:3])
 
-print(f"Part two: {part_two()}")
+print(f"Part two: {part_two()}") #210367

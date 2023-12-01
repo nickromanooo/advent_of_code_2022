@@ -90,5 +90,5 @@ def part_two():
 
     return sum(rounds)
 
-print(f'part one: {part_one()}')
-print(f'part two: {part_two()}')
+print(f'part one: {part_one()}')#14297
+print(f'part two: {part_two()}')#10498

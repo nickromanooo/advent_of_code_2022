@@ -1,4 +1,4 @@
-# https://adventofcode.com/2022/day/#
+# https://adventofcode.com/2022/day/4
 
 def part_one(file):
     f = open(file,'r')
@@ -33,7 +33,12 @@ def part_two(file):
         
     return result
 
-# print(f"Part one test: {part_one('test_input.txt')}")
-# print(f"Part one: {part_one('input.txt')}")
+print(f"Part one test: {part_one('test_input.txt')}")
+print(f"Part one: {part_one('input.txt')}")
 print(f"Part two test: {part_two('test_input.txt')}")
 print(f"Part two: {part_two('input.txt')}")
+
+# Part one test: 8
+# Part one: 471
+# Part two test: 15
+# Part two: 888

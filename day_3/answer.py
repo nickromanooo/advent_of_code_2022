@@ -49,6 +49,6 @@ def part_two(file):
     return sum(values)
 
 # print(f"Part one test: {part_one('test_input.txt')}")
-# print(f"Part one: {part_one('input.txt')}")
+# print(f"Part one: {part_one('input.txt')}")#7428
 print(f"Part two test: {part_two('test_input.txt')}")
-print(f"Part two: {part_two('input.txt')}")
+print(f"Part two: {part_two('input.txt')}") #2650
