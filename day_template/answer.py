@@ -12,4 +12,4 @@ def part_two(file):
 print(f"Part one: {part_one('input.txt')}")
 print(f"Part one test: {part_one('test_input.txt')}")
 print(f"Part two: {part_two('input.txt')}")
-print(f"Part two test: {part_two('text_input.txt')}")
+print(f"Part two test: {part_two('test_input.txt')}")
