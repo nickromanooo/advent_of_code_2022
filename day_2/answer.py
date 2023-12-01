@@ -3,22 +3,23 @@
 # c,z scissors 3
 
 # 0 for loss, 3 for draw, 6 for win
-score_map = {
-    'A':1,
-    'X':1,
 
-    'B':2,
-    'Y':2,
-
-    'C':3,
-    'Z':3
-}
 
 # 1 beats 3
 # 2 beats 1
 # 3 beats 2
 
 def part_one():
+    score_map = {
+        'A':1,
+        'X':1,
+
+        'B':2,
+        'Y':2,
+
+        'C':3,
+        'Z':3
+    }
     f = open('input.txt','r')
     rounds = []
     for line in f.readlines():
@@ -41,11 +42,38 @@ def part_one():
     return sum(rounds)
 
 def part_two():
+    score_map = {
+        'A':1,
+        'X':1,
+        'B':2,
+        'Y':2,
+        'C':3,
+        'Z':3
+    }
+    # win loss draw
+    win_map = {
+        'A': {
+          'X':'C', #lose
+          'Y':'A', #draw
+          'Z':'B', #win
+        },
+        'B': {
+          'X':'A', #lose
+          'Y':'B', #draw
+          'Z':'C', #win
+        },
+        'C': {
+          'X':'B', #lose
+          'Y':'C', #draw
+          'Z':'A', #win
+        },
+    }
     f = open('input.txt','r')
     rounds = []
     for line in f.readlines():
-        them, me = line.strip().split(' ')
-        them, me = score_map[them], score_map[me]
+        them, desired_result = line.strip().split(' ')
+        me = win_map[them][desired_result]
+        me,them = score_map[me],score_map[them]
         score = me
         result = 'loss'
         if me == them:
@@ -62,4 +90,5 @@ def part_two():
 
     return sum(rounds)
 
-print(part_two())
+print(f'part one: {part_one()}')
+print(f'part two: {part_two()}')
