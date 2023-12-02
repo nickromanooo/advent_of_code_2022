@@ -103,7 +103,6 @@ def part_two(file):
     def get_directory_values(key):
         if key not in directory_structure:
             raise Exception(f'BAD KEY: {key}')
-            return 0
         sub_dirs = directory_structure[key]
         if len(sub_dirs) == 0:
             return directory_sub_totals[key]
