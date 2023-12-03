@@ -64,9 +64,6 @@ def part_two(file):
     crt_row = ''
     while len(lines):
         cycle += 1
-        bonus = ' PIXEL' if abs(cycle-x) <= 1 else ''
-
-        # print(f'--cycle {cycle} x {x} {bonus}--')
 
         #draw pixel
         pixel = cycle % 40
